@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Pratiksha ❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff4e8a, #ff9a9e);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+
+    .container {
+        background: rgba(0,0,0,0.3);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    button {
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .yes {
+        background-color: #ffffff;
+        color: #ff4e8a;
+        font-weight: bold;
+    }
+
+    .yes:hover {
+        transform: scale(1.1);
+    }
+
+    .no {
+        background-color: #222;
+        color: white;
+        position: absolute;
+    }
+
+    .final-message {
+        display: none;
+        font-size: 22px;
+        margin-top: 20px;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="proposalBox">
+    <h1>Hi Pratiksha ❤️</h1>
+    <p>
+        Somewhere between our conversations and your smile,  
+        you became someone very special to me.
+    </p>
+    <p>
+        So I have just one question...
+    </p>
+    <h2>Will you be my Valentine?</h2>
+
+    <button class="yes" onclick="sayYes()">Yes 💖</button>
+    <button class="no" id="noBtn" onmouseover="moveNo()">No 🙈</button>
+
+    <div class="final-message" id="finalMessage">
+        I knew it. ❤️  
+        You just made me the happiest person alive, Pratiksha.
+    </div>
+</div>
+
+<script>
+function sayYes() {
+    document.getElementById("finalMessage").style.display = "block";
+}
+
+function moveNo() {
+    var button = document.getElementById("noBtn");
+    var x = Math.random() * (window.innerWidth - 100);
+    var y = Math.random() * (window.innerHeight - 50);
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
